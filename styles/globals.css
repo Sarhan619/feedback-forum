@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	font-size: 62.5%;
+
+	--app-padding: 5rem;
+	--card-padding: 3rem;
+	--disabled-opacity: 0.5;
+
+	--size-300: clamp(1.2rem, 1.1vw, 1.4rem);
+	--size-350: clamp(1.3rem, 1.25vw, 1.6rem);
+	--size-400: clamp(1.4rem, 1.5vw, 1.8rem);
+	--size-500: clamp(1.5rem, 1.6vw, 1.9rem);
+	--size-600: clamp(1.7rem, 1.6vw, 1.9rem);
+	--size-650: clamp(1.7rem, 1.65vw, 2rem);
+	--size-700: clamp(1.8rem, 1.7vw, 2.2rem);
+	--size-800: clamp(2.2rem, 2vw, 2.7rem);
+
+	--purple: #ad1fea;
+	--red: #d73737;
+	--white: #fff;
+	--light: #f7f8fd;
+	--blue: #4661e6;
+	--blue-light: #62bcfa;
+	--blue-light-300: #cfd7ff;
+	--blue-dark: #3a4374;
+	--orange: #f49f85;
+	--gray: #647196;
+	--black: #000;
+	--transparent: transparent;
+
+	--black-transparent-100: rgba(0, 0, 0, 0.06);
+	--black-transparent-200: rgba(0, 0, 0, 0.1);
+	--purple-transparent: hsla(282, 83%, 52%, 0.4);
+	--gray-transparent: hsla(224, 20%, 49%, 0.7);
+
+	--gradient: radial-gradient(
+		128.88% 128.88% at 103.9% -10.39%,
+		#e84d70 0%,
+		#a337f6 53.09%,
+		#28a7ed 100%
+	);
+
+	--shadow-400: 0 0 30px 5px var(--black-transparent-100);
+	--shadow-500: 0 0 30px 5px var(--black-transparent-200);
+
+	--radius-300: 0.4em;
+	--radius-400: 0.6em;
+	--radius-500: 0.8em;
+}
+
+.darkmode {
+	--purple: #7c5dfa;
+	--red: #fc6565;
+	--white: #232a4d;
+	--light: #181d35;
+	--blue-dark: #fff;
+	--blue: #fff;
+	--gray: #fff;
+	--blue-light-300: #13172a;
+	--black-transparent-100: rgba(100, 100, 100, 0.15);
+	--black-transparent-200: rgba(100, 100, 100, 0.3);
+	--shadow-400: 0 0 30px 5px rgba(0, 0, 0, 0.15);
+	--shadow-500: var(--shadow-400);
+}
+
+@media (max-width: 800px) {
+	:root {
+		--app-padding: 3rem;
+	}
+}
+
+html,
+body {
+	font-family: 'Jost', sans-serif;
+	font-size: var(--size-400);
+	line-height: 1.5;
+	background: var(--light);
+	color: var(--gray);
+	min-height: 100vh;
+}
+
+/* navbar translate x causes overflow 
+   & nav bar only shows from tablet Down
+   didn't put it for desktop cus it affects position sticky for cards
+*/
+@media (max-width: 800px) {
+	html,
+	body {
+		overflow-x: hidden !important;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--blue-dark);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	letter-spacing: 0.25px;
+	line-height: 1;
+}
+
+h1 {
+	font-size: var(--size-800);
+}
+h2 {
+	font-size: var(--size-700);
+}
+h3 {
+	font-size: var(--size-600);
+}
+h4 {
+	font-size: var(--size-400);
+}
+
+img,
+svg {
+	max-width: 100%;
+}
+
+button {
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+a,
+button,
+input,
+textarea {
+	font: inherit;
+}
+
+a:focus,
+button:focus,
+input:focus {
+	outline-offset: 2px;
+	outline-style: dashed;
+	outline-width: 2px;
+	outline-color: var(--white);
+}
+
+.darkmode a:focus,
+.darkmode button:focus,
+.darkmode input:focus {
+	outline-color: var(--blue-dark);
+}
+
+/* hide extra long words gotten from user input */
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	max-width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding-block: 0.1em;
+	margin-block: -0.1em;
+}
