@@ -8,7 +8,7 @@
    npm install -g yarn
 
 3. Clone the project repository from GitHub (if applicable) by running the following command:
-   git clone https://github.com/user/repository.git
+   git clone https://github.com/Sarhan619/feedback-forum.git
 
 4. Navigate to the project directory and install the project dependencies by running the following command:
    yarn install
@@ -56,7 +56,7 @@ The `package.json` file contains the following scripts that you can use to perfo
 
 ## Contributing to the Project
 
-We welcome contributions to the project! If you have found a bug or have a feature request, please open an issue on the [project's GitHub page](https://github.com/user/repository).
+We welcome contributions to the project! If you have found a bug or have a feature request, please open an issue on the [project's GitHub page](https://github.com/Sarhan619/feedback-forum).
 
 If you would like to submit a pull request with a bug fix or new feature, please follow these steps:
 
